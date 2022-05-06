@@ -1,0 +1,112 @@
+.offer {
+  height: calc(100vh - 60px);
+  background-color: #ebedee;
+}
+
+.containerOffer {
+  width: 1280px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  gap: 30px;
+}
+
+.picture {
+  height: 600px;
+  object-fit: cover;
+}
+
+.pictureOffer {
+  height: 600px;
+  object-fit: cover;
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  width: 320px;
+  padding: 40px;
+}
+
+.price {
+  font-size: 24px;
+  line-height: 32px;
+  color: #111;
+}
+
+.list {
+  padding: 0;
+  padding-top: 20px;
+}
+
+.list li {
+  display: flex;
+  padding: 2px 0;
+}
+
+.list span {
+  flex: 1;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.list span:nth-child(odd) {
+  color: #999;
+}
+
+.list span:nth-child(even) {
+  color: #666;
+  font-weight: bold;
+}
+
+.divider {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: lightgray;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.content {
+}
+
+.nameProduct {
+  font-weight: bold;
+}
+
+.descriptionProduct {
+  color: #666;
+  margin: 10px 0 10px 0;
+}
+
+.buyButton {
+  color: #fff;
+  background: #09b1ba;
+  border: solid 1px #09b1ba;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 16px;
+  height: 36px;
+  padding: 0 16px;
+  line-height: 36px;
+  margin-top: 32px;
+}
+
+.avatar {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.infosClient {
+  margin: 15px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

@@ -1,0 +1,83 @@
+.signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.h2Signup {
+  margin: 20px 0 20px 0;
+}
+
+.formSignup {
+  display: flex;
+  width: 275px;
+  margin: auto;
+  flex-direction: column;
+}
+
+.inputSignup {
+  border: none;
+  border-bottom: 1px solid #2cb1ba;
+  height: 35px;
+  margin-bottom: 20px;
+}
+
+.inputSignup::placeholder {
+  color: #cbcccd;
+  font-size: 16px;
+}
+
+.checkbox {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.checkbox input[type="checkbox"] {
+  transform: scale(2);
+  margin-right: 25px;
+  accent-color: #2cb1ba;
+}
+
+.checkboxDiv {
+  display: flex;
+  margin: 20px 0 20px 0;
+}
+
+.checkboxSpan {
+  color: #666666;
+  text-align: justify;
+  color: #999999;
+  font-size: 12px;
+}
+
+.checkboxSpan > a {
+  color: #2cb1ba;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.signupErrorMessage {
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.buttonSignupPage {
+  background-color: #2cb1ba;
+  height: 45px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.linkSignup {
+  color: #2cb1ba;
+  text-decoration: none;
+  margin-top: 20px;
+}

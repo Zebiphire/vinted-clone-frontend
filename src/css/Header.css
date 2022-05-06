@@ -1,0 +1,144 @@
+.topnav {
+  background-color: white;
+  overflow: hidden;
+  padding-left: 55px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: gray;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.topnav a:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1280px;
+  margin: auto;
+  padding: 10px 0;
+}
+
+.logo {
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.search {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex: 4;
+}
+
+.inputSearch {
+  width: 590px;
+  padding-left: 40px;
+  background-color: #f5f6f7;
+  border-radius: 5px;
+  height: 37px;
+  border: none;
+  font-size: 16px;
+}
+
+.inputSearch::placeholder {
+  color: #6c6d6d;
+  font-size: 16px;
+}
+
+.InputLogo {
+  position: absolute;
+  left: 7px;
+  top: 12px;
+  color: #bbbbbb;
+}
+
+.buttons {
+  height: 30px;
+  width: 115px;
+  border-radius: 5px;
+  font-family: "Maison Neue";
+  font-size: 14px;
+  outline: none;
+  display: flex;
+  flex-direction: row;
+  flex: 2;
+  font-weight: bold;
+}
+
+.buttonSignup {
+  background-color: white;
+  color: #2cb1ba;
+  border: 1px solid #2cb1ba;
+  margin-right: 20px;
+  display: block;
+  text-align: center;
+}
+
+.buttonSignOut {
+  background-color: white;
+  color: #c2175b;
+  border: 1px solid #c2175b;
+  margin-right: 20px;
+  display: block;
+  text-align: center;
+}
+
+.buttonLogin {
+  background-color: white;
+  color: #2cb1ba;
+  margin-right: 20px;
+  border: 1px solid #2cb1ba;
+  display: block;
+  text-align: center;
+}
+
+.buttonSold {
+  background-color: #2cb1ba;
+  color: white;
+  border: 1px solid #2cb1ba;
+  display: block;
+  text-align: center;
+  flex: 1;
+}
+
+.borderBottom {
+  border-bottom: lightgrey 1px solid;
+}
+
+.bottomBar {
+  display: flex;
+  flex-direction: row;
+}
+
+.sortButton {
+  flex: 1;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  padding-left: 70px;
+}
+
+.priceRange {
+  flex: 4;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.priceRange span {
+  margin-right: 20px;
+}
