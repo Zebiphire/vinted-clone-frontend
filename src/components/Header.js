@@ -1,7 +1,7 @@
 import "../css/Header.css";
 import svgLogo from "../assets/img/logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import PriceRange from "./PriceRange";
 
 const Header = ({
@@ -13,6 +13,7 @@ const Header = ({
   setRangeValues,
 }) => {
   const navigate = useNavigate();
+  const location = useLocation();
   return (
     <div>
       <div className="header">
@@ -68,31 +69,51 @@ const Header = ({
               </div>
             )}
           </div>
-          <button className="buttonSold buttons">Vends tes articles</button>
-        </div>
-      </div>
-      <div className="bottomBar">
-        <div className="sortButton">
-          <span style={{ marginRight: 10 }}>Trier par prix : </span>
-          <span className="checkbox">
-            <input type="checkbox" checked={sort} name="price" />
-            <div
-              className="wrapper"
+          {token ? (
+            <button
+              className="buttonSold buttons"
               onClick={() => {
-                setSort(!sort);
+                navigate("/publish");
               }}
             >
-              <div className="knob">
-                <span>{sort ? "⇣" : "⇡"}</span>
-              </div>
-            </div>
-          </span>
-        </div>
-        <div className="priceRange">
-          <span>Prix entre : </span>
-          <PriceRange setRangeValues={setRangeValues} />
+              {" "}
+              Vends tes articles
+            </button>
+          ) : (
+            <button
+              className="buttonSold buttons"
+              onClick={() => {
+                navigate("/login");
+              }}
+            >
+              {" "}
+              Vends tes articles
+            </button>
+          )}
         </div>
       </div>
+      {location.pathname === "/" ? (
+        <div className="bottomBar">
+          <div className="sortButton">
+            <span style={{ marginRight: 10 }}>Trier par prix décroissant:</span>
+            <div className="checkboxSort">
+              <input
+                type="checkbox"
+                checked={sort}
+                name="price"
+                onClick={() => {
+                  setSort(!sort);
+                }}
+              />
+            </div>
+          </div>
+          <div className="priceRange">
+            <span>Prix entre : </span>
+            <PriceRange setRangeValues={setRangeValues} />
+          </div>
+        </div>
+      ) : null}
+
       <div className="borderBottom"></div>
       <div class="topnav">
         <a href="#home" class="active">

@@ -1,0 +1,176 @@
+.publish {
+  background-color: #ebedee;
+}
+
+.publish h2 {
+  font-size: 24px;
+  padding-top: 40px;
+}
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.file {
+  background-color: white;
+  padding: 24px;
+  margin-top: 20px;
+  box-shadow: 0 0 2px gray;
+  align-items: center;
+  align-content: center;
+}
+
+.imagePreview {
+  border: 1px #ebedee dashed;
+  border-radius: 3px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.imagePreview img {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+}
+
+.removePreviewImage {
+  color: grey;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.previewZone {
+  border: 1px #ebedee dashed;
+  border-radius: 3px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.design {
+  text-align: center;
+  border: 1px solid #0ab1ba;
+  border-radius: 4px;
+  width: 250px;
+}
+
+.label {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  color: #0ab1ba;
+  font-weight: bold;
+}
+
+.signPlus {
+  flex: 2;
+  font-size: 40px;
+}
+
+.addSpan {
+  flex: 5;
+  align-items: center;
+  align-content: center;
+  margin: 0 10px;
+}
+
+.label:hover {
+  color: #25a5c4;
+}
+
+.pictureFile {
+}
+
+.paragraph {
+  background-color: white;
+  margin: 20px 0;
+  box-shadow: 0 0 2px gray;
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.line textarea {
+  width: 50%;
+  resize: none;
+  border: none;
+  border-bottom: 1px solid #ebedee;
+  outline: none;
+  color: black;
+  font-family: "Maison Neue";
+  font-size: 16px;
+}
+
+.line textarea::placeholder {
+  font-size: 16px;
+  color: #c4c7c9;
+}
+
+.line:not(:last-child) {
+  height: 25px;
+  border-bottom: 1px solid #ebedee;
+  vertical-align: center;
+}
+
+.line input::placeholder {
+  font-size: 16px;
+  color: #c4c7c9;
+}
+
+.line h4 {
+  font-weight: normal;
+  margin: 0;
+  vertical-align: baseline;
+}
+.line input {
+  width: 50%;
+  border: none;
+  border-bottom: 1px solid #ebedee;
+  color: black;
+  font-family: "Maison Neue";
+  font-size: 16px;
+}
+
+.buttonNewProduct {
+  display: flex;
+  justify-content: center;
+}
+
+.validation {
+  background-color: #0ab1ba;
+  color: white;
+  border: none;
+  font: inherit;
+  outline: inherit;
+  width: 250px;
+  border-radius: 4px;
+  padding: 12px 12px;
+  margin: 15px 0 25px 0;
+}
+
+.checkboxProduct input {
+}
+
+.checkboxChecked {
+  border-radius: 3px;
+  padding: 3px 6px 3px 6px;
+  margin: 0 15px 0 0;
+  background-color: #0ab1ba;
+}
+
+.checkboxDesign {
+  border-radius: 3px;
+  padding: 2px 11px 2px 11px;
+  margin: 0 15px 0 0;
+  border: 1px solid black;
+}

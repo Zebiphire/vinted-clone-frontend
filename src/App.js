@@ -10,10 +10,11 @@ import Offer from "./pages/Offer";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Footer from "./components/Footer";
+import Publish from "./pages/Publish";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-library.add(faSearch);
+import { faSearch, faCheck } from "@fortawesome/free-solid-svg-icons";
+library.add(faSearch, faCheck);
 
 function App() {
   const [data, setData] = useState([]);
@@ -66,6 +67,7 @@ function App() {
         <Route path="/offer/:id" element={<Offer />} />
         <Route path="/login/" element={<Login setUser={setUser} />} />
         <Route path="/signup" element={<Signup setUser={setUser} />} />
+        <Route path="/publish" element={<Publish token={token} />} />
       </Routes>
       <Footer />
     </Router>
