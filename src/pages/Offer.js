@@ -64,7 +64,7 @@ const Offer = () => {
           </div>
           <div>
             <div className="divider" />
-            <div>
+            <div className="contentOffer">
               <p className="nameProduct">{data.product_name}</p>
               <p className="descriptionProduct">{data.product_description}</p>
               <div className="infosClient">
