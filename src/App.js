@@ -11,6 +11,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Footer from "./components/Footer";
 import Publish from "./pages/Publish";
+import Payment from "./pages/Payment";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faSearch, faCheck } from "@fortawesome/free-solid-svg-icons";
@@ -68,6 +69,7 @@ function App() {
         <Route path="/login/" element={<Login setUser={setUser} />} />
         <Route path="/signup" element={<Signup setUser={setUser} />} />
         <Route path="/publish" element={<Publish token={token} />} />
+        <Route path="/payment" element={<Payment />} />
       </Routes>
       <Footer />
     </Router>

@@ -159,6 +159,7 @@
 }
 
 .checkboxProduct input {
+  display: none;
 }
 
 .checkboxChecked {

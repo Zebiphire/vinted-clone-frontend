@@ -1,6 +1,5 @@
 import Offers from "../components/Offers";
 import "../css/Home.css";
-import HeroImage from "../assets/img/torn.svg";
 
 const Home = ({ data, isLoading }) => {
   console.log("je suis dans Home");
@@ -10,7 +9,7 @@ const Home = ({ data, isLoading }) => {
     <div className="container">
       <div className="heroHome">
         <img
-          src={HeroImage}
+          src="../assets/img/torn.svg"
           alt="hero svg from home page"
           className="heroImage"
         ></img>

@@ -1,0 +1,61 @@
+.payment {
+  background: #ebedee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  padding: 50px;
+}
+
+.summaryInfos {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background-color: white;
+  width: 600px;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 25px;
+  width: 600px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  text-align: justify;
+  background-color: white;
+  width: 600px;
+}
+
+.titlePosition {
+  flex: 9;
+}
+
+.pricePosition {
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.dividerPayment {
+  border: lightgray 1px solid;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.CheckoutForm {
+  display: flex;
+  flex-direction: row;
+}
+
+.boldSpan {
+  font-weight: bold;
+}
