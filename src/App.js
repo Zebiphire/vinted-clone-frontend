@@ -38,14 +38,12 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
+        // "https://vinted-clone-backend.herokuapp.com/offers"
         `https://lereacteur-vinted-api.herokuapp.com/offers?title=${search}&sort=${
           sort ? "price-desc" : "price-asc"
         }&priceMin=${rangeValues[0]}&priceMax=${rangeValues[1]}`
       );
-      console.log(search);
-      console.log(sort);
-      console.log(rangeValues[0]);
-      console.log(rangeValues[1]);
+      console.log(response.data);
       setData(response.data);
       setIsLoading(false);
     };

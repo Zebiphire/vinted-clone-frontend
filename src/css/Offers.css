@@ -29,9 +29,11 @@
   display: flex;
   align-items: center;
   padding: 10px;
+  height: 30px;
+  width: auto;
 }
 
-.username > img {
+.avatarImage {
   height: 25px;
   width: 25px;
   object-fit: cover;
@@ -43,4 +45,3 @@
   color: #999999;
   font-size: 12px;
 }
-

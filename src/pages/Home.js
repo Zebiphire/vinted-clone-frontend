@@ -2,7 +2,6 @@ import Offers from "../components/Offers";
 import "../css/Home.css";
 
 const Home = ({ data, isLoading }) => {
-  console.log("je suis dans Home");
   return isLoading ? (
     <span>En cours de chargement... </span>
   ) : (

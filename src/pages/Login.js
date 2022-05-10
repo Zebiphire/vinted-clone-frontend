@@ -37,6 +37,7 @@ const Login = ({ setUser }) => {
         setErrorMessage("Mauvais email et/ou mot de passe");
         setIsLoading(false);
       }
+      console.log(error);
     }
   };
 

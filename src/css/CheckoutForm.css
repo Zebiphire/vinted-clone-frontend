@@ -34,6 +34,11 @@
 .cardElement {
   height: 50px;
   width: 100%;
-  border: #2db0ba 1px solid;
   color: black;
+}
+
+.paymentCompleted {
+  text-align: center;
+  width: 100%;
+  color: #2db0ba;
 }

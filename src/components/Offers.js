@@ -1,23 +1,29 @@
 import "../css/Offers.css";
 import { useNavigate } from "react-router-dom";
+import Unknown from "../assets/img/unknown.png";
 
 const Offers = ({ data }) => {
   let navigate = useNavigate();
+  console.log("je suis dans offers");
   return (
     <div className="containerOffers">
       <div className="username">
         {data.owner && data.owner.account.avatar && (
-          // data.owner.account.avatar.secure_url === undefined ? (
-          //   <img
-          //     alt={data.product_name}
-          //     src={data.owner.account.avatar.secure_url}
-          //   />
-          // ) : (
-          <img
-            alt={data.product_name}
-            src={data.owner.account.avatar.secure_url}
-            onError="src=../assets/img/unknow.svg"
-          />
+          <>
+            {data.owner.account.avatar.secure_url === null || undefined ? (
+              <img
+                className="avatarImage"
+                alt={data.product_name}
+                src={Unknown}
+              />
+            ) : (
+              <img
+                className="avatarImage"
+                alt={data.product_name}
+                src={data.owner.account.avatar.secure_url}
+              />
+            )}
+          </>
         )}
         <span>{data.owner && data.owner.account.username}</span>
       </div>

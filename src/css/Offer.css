@@ -1,5 +1,5 @@
 .offer {
-  height: calc(100vh - 60px);
+  height: 100%;
   background-color: #ebedee;
 }
 
@@ -71,7 +71,7 @@
   margin-top: 20px;
 }
 
-.content {
+.contentOffer {
 }
 
 .nameProduct {

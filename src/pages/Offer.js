@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -8,6 +8,13 @@ const Offer = () => {
   const { id } = useParams();
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+
+  const navigate = useNavigate();
+
+  const price = data.product_price;
+  const protectionFees = (price / 10).toFixed(2);
+  const shippingFees = (protectionFees * 2).toFixed(2);
+  const total = Number(price) + Number(protectionFees) + Number(shippingFees);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -57,7 +64,7 @@ const Offer = () => {
           </div>
           <div>
             <div className="divider" />
-            <div className="content">
+            <div>
               <p className="nameProduct">{data.product_name}</p>
               <p className="descriptionProduct">{data.product_description}</p>
               <div className="infosClient">
@@ -72,7 +79,23 @@ const Offer = () => {
               </div>
             </div>
           </div>
-          <button className="buyButton">Acheter</button>
+          <button
+            className="buyButton"
+            onClick={() => {
+              navigate("/payment", {
+                state: {
+                  productId: id,
+                  productName: data.product_name,
+                  totalPrice: total,
+                  protectionFees: protectionFees,
+                  shippingFees: shippingFees,
+                  price: data.product_price,
+                },
+              });
+            }}
+          >
+            Acheter
+          </button>
         </div>
       </div>
     </div>

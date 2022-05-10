@@ -1,18 +1,21 @@
 import { loadStripe } from "@stripe/stripe-js";
+import { useLocation } from "react-router-dom";
 import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "../components/CheckoutForm";
 import "../css/Payment.css";
 
-const Payment = ({
-  productName,
-  productId,
-  price,
-  protectionFees,
-  shippingFees,
-  totalPrice,
-}) => {
+const Payment = () => {
+  const location = useLocation();
+  const {
+    productId,
+    productName,
+    totalPrice,
+    protectionFees,
+    shippingFees,
+    price,
+  } = location.state;
   const stripePromise = loadStripe(
-    "pk_test_51KxopmINODSEySKQ1RX6rBl4m6LOY7RQJFD01r7doozTazjS3BI1Bt5l0Twn8sws28ghEYOjlc3Cmkvi1tO8ttGh002SL8vdmJ"
+    "pk_test_51HCObyDVswqktOkX6VVcoA7V2sjOJCUB4FBt3EOiAdSz5vWudpWxwcSY8z2feWXBq6lwMgAb5IVZZ1p84ntLq03H00LDVc2RwP"
   );
 
   return (
@@ -42,14 +45,17 @@ const Payment = ({
       <div className="card">
         <span>
           Il ne vous reste plus qu'un étape pour vous offrir
-          <span className="boldSpan"> {productName}</span>Vous allez payer{" "}
+          <span className="boldSpan"> {productName}.</span> Vous allez payer{" "}
           <span className="boldSpan">{totalPrice} €</span> (frais de protection
           et frais de port inclus).
         </span>
         <div className="dividerPayment" />
         <div className="CheckoutForm">
           <Elements stripe={stripePromise}>
-            <CheckoutForm></CheckoutForm>
+            <CheckoutForm
+              productName={productName}
+              totalPrice={totalPrice}
+            ></CheckoutForm>
           </Elements>
         </div>
       </div>
